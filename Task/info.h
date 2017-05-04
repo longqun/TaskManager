@@ -1,6 +1,5 @@
 #include "Fltkernel.h"
 #ifndef _INFO_H
-
 #define _INFO_H
 
 extern const int MAX_COUNT_ENTRY;

@@ -40,7 +40,7 @@ NTSTATUS DriverEntry(PDRIVER_OBJECT pDriverObject, PUNICODE_STRING pRegPath)
 		return status;
 	}
 	pDeviceObject->Flags &= ~DO_DEVICE_INITIALIZING;
-	
+	DbgPrint("The current IRQL is %d\n",KeGetCurrentIrql());
 	treatPspCildTable(getHandleTable(getPspClidTable()));
 	return status;
 }
